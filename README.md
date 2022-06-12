@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# CB-api
+A simple api request app.
+>>>>>>> 948f24bbb3d94e0d944170dd7ebb5318d428cb02
