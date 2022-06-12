@@ -1,0 +1,45 @@
+    <%# @cat_weight = @cat_json[0]['breeds'][0]['weight']['metric'] # 5-7kg
+    @cat_breed = @cat_json[0]['breeds'][0]['name'] #bengal
+    @more_info = @cat_json[0]['breeds'][0]['cfa_url']
+    @cat_temperament = @cat_json[0]['breeds'][0]['temperament']
+    @cat_origin = @cat_json[0]['breeds'][0]['origin']
+    @cat_desc = @cat_json[0]['breeds'][0]['description']
+    @cat_life_span = @cat_json[0]['breeds'][0]['life_span'] # 12-15 years
+    @cat_affection = @cat_json[0]['breeds'][0]['affection_level'] # /5
+    @cat_child_friendly = @cat_json[0]['breeds'][0]['child_friendly'] # /5
+    @cat_intelligence = @cat_json[0]['breeds'][0]['intelligence'] # /5
+    @cat_adaptability = @cat_json[0]['breeds'][0]['cat_friendly'] # /5
+    @dog_friendliness = @cat_json[0]['breeds'][0]['dog_friendly'] %>
+
+<h1><%= @cat_breed %> CATS! </h1>
+
+<h4> Basic Stats & Info: </h4>
+  <div class="stats">
+    <ul>
+      <li>Weight Range: <%= @cat_weight %>kg </li>
+      <li>Life-span: <%= @cat_life_span %> years </li>
+      <li>Affection Rating: <%= @cat_affection %>/5 </li>
+      <li>Child Friendly Rating: <%= @cat_child_friendly %>/5 </li>
+      <li>Intelligence Rating: <%= @cat_intelligence %>/5 </li>
+      <li>Adaptability Rating: <%= @cat_adaptability %>/5 </li>
+      <li>Dog Compatability: <%= @dog_friendliness %>/5 </li>
+      <li>Origin: <%= @cat_origin %> </li>
+    </ul>
+  </div>
+
+  <div id="cat-img">
+     <img src="<%=@cat_img%>" alt="bengal cat image!" id='cat-img'>
+  </div>
+
+<div class="about">
+  <h4>About <%= @cat_breed %>s </h4>
+  <p id="cat-desc"> <%= @cat_temperament%>. <%= @cat_desc %> </p>
+</div>
+
+<div class="further-info">
+  <h4>Further information about <%= @cat_breed %> Cats: </h4>
+  <span> <a href=<%=@cfa_url%> target="blank">The Cat Franciers' Association Info</a></span> <br>
+  <span> <a href=<%=@vetstreet_url%> target="blank"> Vet Street Info </a></span> <br>
+  <span> <a href=<%=@vcahospitals_url%> target="blank"> VCA Hospitals Info </a></span> <br>
+  <span> <a href=<%=@wikipedia_url%> target="blank"> Bengal Cats Wikipedia </a></span>
+</div>
