@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
 # CB-api
-A simple api request app.
->>>>>>> 948f24bbb3d94e0d944170dd7ebb5318d428cb02
+A simple api request app the sends requests to https://thecatapi.com/ to display some basic info about cats.
+
