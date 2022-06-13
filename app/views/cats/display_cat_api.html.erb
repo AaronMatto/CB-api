@@ -11,33 +11,37 @@
     @cat_adaptability = @cat_json[0]['breeds'][0]['cat_friendly'] # /5
     @dog_friendliness = @cat_json[0]['breeds'][0]['dog_friendly'] %>
 
-<h1><%= @cat_breed %> CATS! </h1>
+<h1 id="title"><%= @cat_breed.upcase %> CATS!  🐾 </h1>
 
-<h4> Basic Stats & Info: </h4>
-  <div class="stats">
+<div class="stats-picture-container">
+  <div class="cat-stats-container">
+    <h4 id="info-title"> Basic Stats & Info: </h4>
     <ul>
-      <li>Weight Range: <%= @cat_weight %>kg </li>
-      <li>Life-span: <%= @cat_life_span %> years </li>
-      <li>Affection Rating: <%= @cat_affection %>/5 </li>
-      <li>Child Friendly Rating: <%= @cat_child_friendly %>/5 </li>
-      <li>Intelligence Rating: <%= @cat_intelligence %>/5 </li>
-      <li>Adaptability Rating: <%= @cat_adaptability %>/5 </li>
-      <li>Dog Compatability: <%= @dog_friendliness %>/5 </li>
-      <li>Origin: <%= @cat_origin %> </li>
+      <li class="stats">Weight Range: <%= @cat_weight %>kg </li>
+      <li class="stats">Life-span: <%= @cat_life_span %> years </li>
+      <li class="stats">Affection Rating: <%= @cat_affection %>/5 </li>
+      <li class="stats">Child Friendly Rating: <%= @cat_child_friendly %>/5 </li>
+      <li class="stats">Intelligence Rating: <%= @cat_intelligence %>/5 </li>
+      <li class="stats">Adaptability Rating: <%= @cat_adaptability %>/5 </li>
+      <li class="stats">Dog Compatability: <%= @dog_friendliness %>/5 </li>
+      <li class="stats">Origin: <%= @cat_origin %> </li>
     </ul>
   </div>
 
-  <div id="cat-img">
-     <img src="<%=@cat_img%>" alt="bengal cat image!" id='cat-img'>
+  <div class="cat-img-container">
+    <img src="<%=@cat_img%>" alt="bengal cat image!" id="cat-img">
   </div>
-
-<div class="about">
-  <h4>About <%= @cat_breed %>s </h4>
-  <p id="cat-desc"> <%= @cat_temperament%>. <%= @cat_desc %> </p>
 </div>
 
-<div class="further-info">
-  <h4>Further information about <%= @cat_breed %> Cats: </h4>
+
+
+<div class="about">
+  <h4 id="about-title">About <%= @cat_breed %> Cats</h4>
+  <p id="cat-desc"><%= @cat_temperament%>. <%= @cat_desc %></p>
+</div>
+
+<h4 id="further-info-title">Further information about <%= @cat_breed %> Cats: </h4>
+<div class="info-links">
   <span> <a href=<%=@cfa_url%> target="blank">The Cat Franciers' Association Info</a></span> <br>
   <span> <a href=<%=@vetstreet_url%> target="blank"> Vet Street Info </a></span> <br>
   <span> <a href=<%=@vcahospitals_url%> target="blank"> VCA Hospitals Info </a></span> <br>
