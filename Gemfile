@@ -5,6 +5,8 @@ ruby '2.7.4'
 
 gem 'dotenv-rails', groups: [:development]
 
+gem 'httparty'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.8'
 # Use sqlite3 as the database for Active Record

@@ -4,8 +4,8 @@ class CatsController < ApplicationController
 
   def display_cat_api
     @url = 'https://api.thecatapi.com/v1/images/search?breed_id=beng'
-    @url_serailised = URI.open(@url, 'api-key' => ENV['CAT_API_KEY']).read
-    @cat_json = JSON.parse(@url_serailised)
+    @response = HTTParty.get(@url, headers: {'x-api-key' => ENV['CAT_API_KEY']})
+    @cat_json = JSON.parse(@response.body)
 
     #picture
     @cat_img = @cat_json[0]['url']

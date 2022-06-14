@@ -12,7 +12,6 @@ body {
 }
 
 .stats-picture-container {
-  // border: 2px solid red;
   width: 90%;
   height: 700px;
   margin-left: 30px;
@@ -93,4 +92,16 @@ body {
   font-size: 25px;
   margin: 30px auto 100px 30px;
   padding: 0 25px;
+}
+
+
+@media (max-width: 1380px) {
+  .stats-picture-container {
+    overflow: scroll;
+  }
+
+  .info-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
