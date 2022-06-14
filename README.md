@@ -4,4 +4,4 @@ A simple api request app the sends requests to https://thecatapi.com/ to display
 
 It is worth noting that while the cat API documentation states it requires an API key for the endpoint I have chosen to use,
 (https://api.thecatapi.com/v1/images/search?breed_id=beng)
-the key is not essential to perform a request. I decided to attach the key by using the HTTParty gem anyway via header.
+the key is not essential to perform a request; the key allows the user to receive more info from a request as opposed to denying/granting access. I decided to attach the key by using the HTTParty gem anyway via header.
